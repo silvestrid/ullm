@@ -47,9 +47,11 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/silvestrid/ullm"
+Homepage = "https://silvestrid.github.io/ullm/"
+Documentation = "https://silvestrid.github.io/ullm/"
 Repository = "https://github.com/silvestrid/ullm"
 Issues = "https://github.com/silvestrid/ullm/issues"
+Changelog = "https://github.com/silvestrid/ullm/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["hatchling"]
