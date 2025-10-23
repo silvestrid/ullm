@@ -2,7 +2,7 @@
 
 **Lightweight, fast alternative to litellm** - A minimal unified interface for LLM providers.
 
-[![Tests](https://github.com/silvestrid/ullm/workflows/tests/badge.svg)](https://github.com/silvestrid/ullm/actions)
+[![Tests](https://github.com/silvestrid/ullm/actions/workflows/tests.yml/badge.svg)](https://github.com/silvestrid/ullm/actions/workflows/tests.yml)
 [![PyPI version](https://badge.fury.io/py/ullm.svg)](https://badge.fury.io/py/ullm)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://silvestrid.github.io/ullm/)
