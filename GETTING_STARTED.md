@@ -61,7 +61,7 @@ pytest tests/ -v
 
 ```bash
 # Create a new repository on GitHub, then:
-git remote add origin https://github.com/yourusername/ullm.git
+git remote add origin https://github.com/silvestrid/ullm.git
 git branch -M main
 git push -u origin main
 ```
@@ -221,8 +221,8 @@ pip install ullm[aws]
 ## Support
 
 - 📖 Documentation: See README.md and QUICKSTART.md
-- 🐛 Issues: https://github.com/yourusername/ullm/issues
-- 💬 Discussions: https://github.com/yourusername/ullm/discussions
+- 🐛 Issues: https://github.com/silvestrid/ullm/issues
+- 💬 Discussions: https://github.com/silvestrid/ullm/discussions
 
 ## Success Criteria
 

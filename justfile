@@ -48,3 +48,15 @@ dev:
 
 # Run CI checks (same as CI will run)
 ci: lint type-check test-cov
+
+# Serve documentation locally
+docs-serve:
+    mkdocs serve
+
+# Build documentation
+docs-build:
+    mkdocs build
+
+# Deploy documentation to GitHub Pages
+docs-deploy:
+    mkdocs gh-deploy

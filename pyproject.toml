@@ -40,11 +40,16 @@ dev = [
 aws = [
     "boto3>=1.34.0",
 ]
+docs = [
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.5.0",
+    "mkdocstrings[python]>=0.24.0",
+]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/ullm"
-Repository = "https://github.com/yourusername/ullm"
-Issues = "https://github.com/yourusername/ullm/issues"
+Homepage = "https://github.com/silvestrid/ullm"
+Repository = "https://github.com/silvestrid/ullm"
+Issues = "https://github.com/silvestrid/ullm/issues"
 
 [build-system]
 requires = ["hatchling"]

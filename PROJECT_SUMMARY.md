@@ -241,11 +241,11 @@ ullm:    3 core dependencies
 
 ## Links
 
-- GitHub: https://github.com/yourusername/ullm
+- GitHub: https://github.com/silvestrid/ullm
 - PyPI: https://pypi.org/project/ullm/
 - Documentation: [README.md](README.md)
 - Quick Start: [QUICKSTART.md](QUICKSTART.md)
-- Issues: https://github.com/yourusername/ullm/issues
+- Issues: https://github.com/silvestrid/ullm/issues
 
 ## Acknowledgments
 

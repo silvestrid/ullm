@@ -202,4 +202,4 @@ Check the `examples/` directory for more:
 
 - Read the [README](README.md) for full documentation
 - Check [CONTRIBUTING](CONTRIBUTING.md) to contribute
-- Open issues on [GitHub](https://github.com/yourusername/ullm/issues)
+- Open issues on [GitHub](https://github.com/silvestrid/ullm/issues)

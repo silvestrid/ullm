@@ -2,9 +2,10 @@
 
 **Lightweight, fast alternative to litellm** - A minimal unified interface for LLM providers.
 
-[![Tests](https://github.com/yourusername/ullm/workflows/tests/badge.svg)](https://github.com/yourusername/ullm/actions)
+[![Tests](https://github.com/silvestrid/ullm/workflows/tests/badge.svg)](https://github.com/silvestrid/ullm/actions)
 [![PyPI version](https://badge.fury.io/py/ullm.svg)](https://badge.fury.io/py/ullm)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://silvestrid.github.io/ullm/)
 
 ## Why ullm?
 
@@ -181,6 +182,15 @@ litellm: ~1.2s
 ullm: ~0.05s (24x faster)
 ```
 
+## Documentation
+
+📚 **[Full documentation available at silvestrid.github.io/ullm](https://silvestrid.github.io/ullm/)**
+
+- [Installation Guide](https://silvestrid.github.io/ullm/getting-started/installation/)
+- [Quick Start](https://silvestrid.github.io/ullm/getting-started/quickstart/)
+- [API Reference](https://silvestrid.github.io/ullm/api/completion/)
+- [Architecture Decisions](https://silvestrid.github.io/ullm/architecture/decisions/)
+
 ## Use with DSPy
 
 ```python
@@ -197,7 +207,7 @@ dspy.configure(lm=lm)
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/ullm.git
+git clone https://github.com/silvestrid/ullm.git
 cd ullm
 
 # Install with uv

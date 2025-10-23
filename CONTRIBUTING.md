@@ -6,7 +6,7 @@ Thank you for your interest in contributing to ullm!
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ullm.git
+   git clone https://github.com/silvestrid/ullm.git
    cd ullm
    ```
 
