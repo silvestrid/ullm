@@ -11,7 +11,9 @@ from ullm.exceptions import AuthenticationError
 @pytest.mark.skipif(not os.getenv("OPENAI_API_KEY"), reason="OPENAI_API_KEY not set")
 def test_openai_completion():
     """Test OpenAI completion."""
-    response = ullm.completion(model="openai/gpt-4o-mini", messages=[{"role": "user", "content": "Say hello!"}], max_tokens=50)
+    response = ullm.completion(
+        model="openai/gpt-4o-mini", messages=[{"role": "user", "content": "Say hello!"}], max_tokens=50
+    )
 
     assert isinstance(response, ullm.ModelResponse)
     assert len(response.choices) > 0
@@ -44,7 +46,11 @@ def test_openai_tool_calling():
             "function": {
                 "name": "get_weather",
                 "description": "Get weather for a location",
-                "parameters": {"type": "object", "properties": {"location": {"type": "string"}}, "required": ["location"]},
+                "parameters": {
+                    "type": "object",
+                    "properties": {"location": {"type": "string"}},
+                    "required": ["location"],
+                },
             },
         }
     ]

@@ -71,7 +71,11 @@ class AnthropicClient(BaseClient):
             func = tool_dict.get("function", {})
 
             anthropic_tools.append(
-                {"name": func.get("name"), "description": func.get("description", ""), "input_schema": func.get("parameters", {})}
+                {
+                    "name": func.get("name"),
+                    "description": func.get("description", ""),
+                    "input_schema": func.get("parameters", {}),
+                }
             )
 
         return anthropic_tools
@@ -148,14 +152,14 @@ class AnthropicClient(BaseClient):
                     ToolCall(
                         id=block.get("id", ""),
                         type="function",
-                        function=FunctionCall(
-                            name=block.get("name", ""), arguments=json.dumps(block.get("input", {}))
-                        ),
+                        function=FunctionCall(name=block.get("name", ""), arguments=json.dumps(block.get("input", {}))),
                     )
                 )
 
         message = Message(
-            role="assistant", content=text_content if text_content else None, tool_calls=tool_calls if tool_calls else None
+            role="assistant",
+            content=text_content if text_content else None,
+            tool_calls=tool_calls if tool_calls else None,
         )
 
         choice = Choice(index=0, message=message, finish_reason=data.get("stop_reason"))
@@ -210,9 +214,7 @@ class AnthropicClient(BaseClient):
                     created=int(time.time()),
                     model=model,
                     choices=[
-                        StreamChoice(
-                            index=0, delta=Delta(content=delta_data.get("text", "")), finish_reason=None
-                        )
+                        StreamChoice(index=0, delta=Delta(content=delta_data.get("text", "")), finish_reason=None)
                     ],
                 )
 

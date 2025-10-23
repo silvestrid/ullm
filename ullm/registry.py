@@ -16,9 +16,11 @@ def register_client(provider: str):
         class OpenAIClient(BaseClient):
             ...
     """
+
     def decorator(client_class: Type[BaseClient]) -> Type[BaseClient]:
         _CLIENT_REGISTRY[provider] = client_class
         return client_class
+
     return decorator
 
 
@@ -39,6 +41,7 @@ def get_client(provider: str, **kwargs: Any) -> BaseClient:
 
     if client_class is None:
         from ullm.exceptions import UnsupportedProviderError
+
         raise UnsupportedProviderError(provider, kwargs.get("model", "unknown"))
 
     return client_class(**kwargs)

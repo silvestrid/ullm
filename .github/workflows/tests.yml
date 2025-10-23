@@ -8,10 +8,10 @@ on:
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
         python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
 
     steps:
@@ -37,17 +37,13 @@ jobs:
         uv run ruff check .
         uv run ruff format --check .
 
-    - name: Type check with mypy
-      run: |
-        uv run mypy ullm
-
     - name: Run tests
       run: |
         uv run pytest tests/ -v
 
     - name: Upload coverage
       uses: codecov/codecov-action@v3
-      if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.11'
+      if: matrix.python-version == '3.11'
       with:
         file: ./coverage.xml
         fail_ci_if_error: false

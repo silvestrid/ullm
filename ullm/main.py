@@ -272,9 +272,7 @@ def responses(
 
         return _make_request()
     else:
-        return client.responses(
-            model=model_name, input=input, temperature=temperature, max_tokens=max_tokens, **kwargs
-        )
+        return client.responses(model=model_name, input=input, temperature=temperature, max_tokens=max_tokens, **kwargs)
 
 
 async def aresponses(

@@ -28,7 +28,9 @@ tools = [
             "description": "Get the current weather for a location",
             "parameters": {
                 "type": "object",
-                "properties": {"location": {"type": "string", "description": "The city and state, e.g. San Francisco, CA"}},
+                "properties": {
+                    "location": {"type": "string", "description": "The city and state, e.g. San Francisco, CA"}
+                },
                 "required": ["location"],
             },
         },
