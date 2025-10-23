@@ -9,27 +9,12 @@ from tenacity import (
     wait_exponential,
 )
 
-from ullm.clients import AnthropicClient, BedrockClient, GroqClient, OpenAIClient
-from ullm.clients.base import BaseClient
+# Import clients to trigger registration
+import ullm.clients  # noqa: F401
 from ullm.exceptions import RateLimitError, Timeout
 from ullm.providers import parse_model_name
+from ullm.registry import get_client as _get_client
 from ullm.types import ModelResponse, ResponseFormat, StreamChunk, Tool
-
-
-def _get_client(provider: str, **kwargs: Any) -> BaseClient:
-    """Get the appropriate client for a provider."""
-    if provider == "openai":
-        return OpenAIClient(**kwargs)
-    elif provider == "anthropic":
-        return AnthropicClient(**kwargs)
-    elif provider == "groq":
-        return GroqClient(**kwargs)
-    elif provider == "bedrock":
-        return BedrockClient(**kwargs)
-    else:
-        from ullm.exceptions import UnsupportedProviderError
-
-        raise UnsupportedProviderError(provider, kwargs.get("model", "unknown"))
 
 
 def _create_retry_decorator(num_retries: int = 3):

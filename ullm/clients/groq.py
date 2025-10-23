@@ -4,8 +4,10 @@ import os
 from typing import Optional
 
 from ullm.clients.openai import OpenAIClient
+from ullm.registry import register_client
 
 
+@register_client("groq")
 class GroqClient(OpenAIClient):
     """
     Client for Groq API.

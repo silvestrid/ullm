@@ -7,6 +7,7 @@ from typing import Any, AsyncIterator, Dict, Iterator, Optional, Union
 
 from ullm.clients.base import BaseClient
 from ullm.exceptions import BadRequestError
+from ullm.registry import register_client
 from ullm.types import (
     Choice,
     Delta,
@@ -20,6 +21,7 @@ from ullm.types import (
 )
 
 
+@register_client("bedrock")
 class BedrockClient(BaseClient):
     """Client for AWS Bedrock API."""
 

@@ -8,6 +8,7 @@ from typing import Any, AsyncIterator, Dict, Iterator, Optional, Union
 import httpx
 
 from ullm.clients.base import BaseClient
+from ullm.registry import register_client
 from ullm.types import (
     Choice,
     Delta,
@@ -21,6 +22,7 @@ from ullm.types import (
 )
 
 
+@register_client("openai")
 class OpenAIClient(BaseClient):
     """Client for OpenAI API."""
 
