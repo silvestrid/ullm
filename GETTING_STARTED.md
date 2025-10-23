@@ -115,20 +115,21 @@ ullm/
 ├── QUICKSTART.md                  # Quick reference
 ├── PROJECT_SUMMARY.md             # Technical summary
 ├── CONTRIBUTING.md                # Contribution guide
-└── Makefile                       # Dev commands
+└── justfile                       # Dev commands
 ```
 
 ## Development Commands
 
 ```bash
-make install      # Install dependencies
-make test         # Run tests
-make test-cov     # Run tests with coverage
-make lint         # Lint code
-make format       # Format code
-make type-check   # Type check
-make all          # Run all checks
-make clean        # Clean build artifacts
+just install      # Install dependencies
+just test         # Run tests
+just test-cov     # Run tests with coverage
+just lint         # Lint code
+just format       # Format code
+just type-check   # Type check
+just all          # Run all checks
+just clean        # Clean build artifacts
+just ci           # Run CI checks locally
 ```
 
 ## Key Design Decisions
@@ -214,7 +215,7 @@ pip install ullm[aws]
 2. Create a feature branch
 3. Make your changes
 4. Add tests
-5. Run `make all` to verify
+5. Run `just all` to verify
 6. Submit a pull request
 
 ## Support

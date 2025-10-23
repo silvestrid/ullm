@@ -60,7 +60,7 @@ ullm/
 ├── QUICKSTART.md             # Quick start guide
 ├── CONTRIBUTING.md           # Contribution guide
 ├── CHANGELOG.md              # Version history
-├── Makefile                  # Development commands
+├── justfile                  # Development commands
 └── LICENSE                   # MIT License
 ```
 
@@ -164,19 +164,20 @@ dspy.configure(lm=lm)
 
 ```bash
 # Setup
-make dev                    # Create venv
+just dev                    # Create venv
 source .venv/bin/activate
-make install                # Install dependencies
+just install                # Install dependencies
 
 # Development
-make format                 # Format code with ruff
-make lint                   # Lint code
-make type-check             # Type check with mypy
-make test                   # Run tests
-make test-cov               # Run tests with coverage
+just format                 # Format code with ruff
+just lint                   # Lint code
+just type-check             # Type check with mypy
+just test                   # Run tests
+just test-cov               # Run tests with coverage
 
 # All checks
-make all                    # format + lint + type-check + test
+just all                    # format + lint + type-check + test
+just ci                     # Run CI checks locally
 ```
 
 ## Publishing to PyPI
